@@ -8,7 +8,7 @@ const { duplicate, transform } = require("./streambox");
 // withArgs(["Luffy", "Zoro", "Usopp", "Robin", "Nami", "Sanji", "Ch0pper"]);
 
 //e03
-duplicate(process.argv[2]);
+// duplicate(process.argv[2]);
 
 //e04
 transform(process.argv[2], /[a-z]/g, (c) => {

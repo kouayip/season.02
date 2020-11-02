@@ -17,7 +17,13 @@ function duplicate(filename) {
   readable.pipe(writable);
 }
 
-function transform(filename, re, fn) {}
+function transform(filename, re, fn) {
+  const readable = fs.createReadStream(filename);
+  readable.on("data", (chunk) => {
+    const std = chunk.toString();
+    console.log(std.replace(re, fn));
+  });
+}
 
 module.exports = {
   duplicate,
