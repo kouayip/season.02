@@ -1,5 +1,5 @@
 const { empty, withArgs } = require("./eventbox");
-const { duplicate, transform } = require("./streambox");
+const { duplicate, transform, csv2json } = require("./streambox");
 
 //e01
 // empty();
@@ -16,11 +16,14 @@ const { duplicate, transform } = require("./streambox");
 // });
 
 //e05
-transform(
-  process.argv[2],
-  /[a-z]/g,
-  (c) => {
-    return c.toUpperCase();
-  },
-  false
-);
+// transform(
+//   process.argv[2],
+//   /[a-z]/g,
+//   (c) => {
+//     return c.toUpperCase();
+//   },
+//   false
+// );
+
+//e06
+csv2json(process.argv[2]);
