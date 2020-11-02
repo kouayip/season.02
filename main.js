@@ -11,6 +11,16 @@ const { duplicate, transform } = require("./streambox");
 // duplicate(process.argv[2]);
 
 //e04
-transform(process.argv[2], /[a-z]/g, (c) => {
-  return c.toUpperCase();
-});
+// transform(process.argv[2], /[a-z]/g, (c) => {
+//   return c.toUpperCase();
+// });
+
+//e05
+transform(
+  process.argv[2],
+  /[a-z]/g,
+  (c) => {
+    return c.toUpperCase();
+  },
+  false
+);
